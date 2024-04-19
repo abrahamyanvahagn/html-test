@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form with Internal CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; /* space between elements */
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            width: 200px; /* fixed width */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <input type="text" id="myTextField" placeholder="Enter text here...">
+        <button type="button" onclick="buttonClicked()">Click Me</button>
+    </div>
+    <script>
+        function buttonClicked() {
+            const textField = document.getElementById('myTextField');
+            alert('You entered: ' + textField.value);
+        }
+    </script>
+</body>
+</html>
