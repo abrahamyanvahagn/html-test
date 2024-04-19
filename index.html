@@ -46,14 +46,19 @@
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <input type="text" id="myTextField" placeholder="Enter text here...">
-        <button type="button" onclick="buttonClicked()">Click Me</button>
+    <div class=“form-container”>
+        <input type=“text” id=“myTextField” placeholder=“Enter text here...“>
+        <button type=“button” onclick=“buttonClicked()“>Click Me</button>
     </div>
     <script>
         function buttonClicked() {
-            const textField = document.getElementById('myTextField');
-            alert('You entered: ' + textField.value);
+            var textField = document.getElementById(‘myTextField’).value;
+            var redirectUrl = “https://app.myameria.am/pay/getpaymentoptions?merchantName=” + encodeURIComponent(textField) +
+                              “&transactionAmount=” + encodeURIComponent(textField) +
+                              “&transactionId=000000035768&merchantId=19009999&terminalId=19019999&callbackscheme=ameria-testapp.pages.dev”;
+            window.location.href = redirectUrl;
+            // Uncomment the line below to debug the URL in an alert box.
+            // alert(‘Redirecting to: ’ + redirectUrl);
         }
     </script>
 </body>
