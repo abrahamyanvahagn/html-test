@@ -54,7 +54,7 @@
         function buttonClicked() {
             var textField = document.getElementById("myTextField").value;
             // var redirectUrl = "https://app.myameria.am/authorization/loginInfo?username="testUsername"&callbackscheme=ameria-testapp.pages.dev";
-            var redirectUrl = "https://app.myameria.am/pay/getpaymentoptions?merchantName=" + encodeURIComponent(textField) +
+            var redirectUrl = "https://app.myameria.am/authorization/getpaymentoptions?merchantName=" + encodeURIComponent(textField) +
                                "&transactionAmount=" + encodeURIComponent(textField) +
                                "&transactionId=000000035768&merchantId=19009999&terminalId=19019999&callbackscheme=ameria-testapp.pages.dev";
             window.location.href = redirectUrl;
