@@ -52,7 +52,7 @@
     </div>
     <script>
         function buttonClicked() {
-            var textFieldText = document.getElementById("myTextField").value;
+            var textField = document.getElementById("myTextField").value;
             // var redirectUrl = "https://app.myameria.am/authorization/loginInfo?username="testUsername"&callbackscheme=ameria-testapp.pages.dev";
             var redirectUrl = "https://app.myameria.am/pay/getpaymentoptions?merchantName=" + encodeURIComponent(textField) +
                                "&transactionAmount=" + encodeURIComponent(textField) +
