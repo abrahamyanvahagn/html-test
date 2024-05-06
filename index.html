@@ -53,10 +53,11 @@
     <script>
         function buttonClicked() {
             var textField = document.getElementById("myTextField").value;
-            // var redirectUrl = "https://app.myameria.am/authorization/loginInfo?username="testUsername"&callbackscheme=ameria-testapp.pages.dev";
-            var redirectUrl = "https://app.myameria.am/authorization/getpaymentoptions?merchantName=" + encodeURIComponent(textField) +
-                               "&transactionAmount=" + encodeURIComponent(textField) +
-                               "&transactionId=000000035768&merchantId=19009999&terminalId=19019999&callbackscheme=ameria-testapp.pages.dev";
+            var redirectUrl = "https://app.myameria.am/authorization/loginInfo?username=" + encodeURIComponent(textField) +
+                               "&callbackscheme=ameria-testapp.pages.dev";
+            // var redirectUrl = "https://app.myameria.am/authorization/getpaymentoptions?merchantName=" + encodeURIComponent(textField) +
+            //                    "&transactionAmount=" + encodeURIComponent(textField) +
+            //                    "&transactionId=000000035768&merchantId=19009999&terminalId=19019999&callbackscheme=ameria-testapp.pages.dev";
             window.location.href = redirectUrl;
             // Uncomment the line below to debug the URL in an alert box.
             // alert("Redirecting to: "+ redirectUrl);
